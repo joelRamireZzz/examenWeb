@@ -48,5 +48,24 @@ ul li a:hover {
 }
 
 .container{
+    
     background-color: #92b4f4;
+    border-radius: 8%;
+}
+.bienvenida {
+    display: flex;
+    flex-direction: row;   
+    align-items: center;   
+    gap: 20px;             
+}
+
+.imgHospital {
+    width: 300px;          
+    height: auto;
+    border-radius: 20px;   
+    flex-shrink: 0;       
+}
+
+.bienvenida-texto {
+    flex: 1;              
 }
