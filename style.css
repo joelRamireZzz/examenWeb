@@ -1,71 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+:root {
+    --azul-1: #0A369D;   /* azul oscuro */
+    --azul-2: #4472CA;   /* azul medio */
+    --azul-3: #5E7CE2;   /* azul violáceo */
+    --azul-4: #92B4F4;   /* azul claro */
+    --azul-5: #CFDEE7;   /* azul muy claro / fondo */
+    --blanco: #f5f8ff;
+    --texto-oscuro: #0d1f3c;
+    --texto-medio: #3a4f6a;
+    --texto-claro: #6a7f9a;
+}
 
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: medium;
-    font-style: italic;
-    background-color: #cfdee7;
-    justify-content: center; 
-    align-items: center;      
-    min-height: 100vh;      
-    margin: 0;
-    
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    background-color: var(--azul-5);
+    color: var(--texto-oscuro);
 }
+
+/* ══════════════════════════════
+   NAVBAR
+══════════════════════════════ */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--azul-1);
+}
+
 .navbar-nav {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-#nav ul{
-    display: inline-block;
-    list-style-type: none;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #5e7ce2;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 62px;
 }
 
-ul li {
-  float: left;
+.navbar-nav li a {
+    color: rgba(245, 248, 255, 0.72);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
-ul li a {
-  display: block;
-  color: #cfdee7;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+/* ══════════════════════════════
+   HERO / BIENVENIDA
+══════════════════════════════ */
+.container {
+    background: linear-gradient(135deg, var(--azul-1) 0%, var(--azul-2) 55%, var(--azul-3) 100%);
+    padding: 64px 60px;
+    position: relative;
+    overflow: hidden;
 }
 
-ul li a:hover {
-  background-color: #0a369d;
-}
-
-.container{
-    
-    background-color: #92b4f4;
-    border-radius: 8%;
-}
 .bienvenida {
     display: flex;
-    flex-direction: row;   
-    align-items: center;   
-    gap: 20px;             
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .imgHospital {
-    width: 300px;          
-    height: auto;
-    border-radius: 20px;   
-    flex-shrink: 0;       
+    width: 360px;
+    height: 260px;
+    border-radius: 10%;
 }
 
-.bienvenida-texto {
-    flex: 1;              
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--azul-1);
+    margin-bottom: 32px;
 }
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+footer {
+    background: linear-gradient(180deg, var(--azul-1) 0%, #071d52 100%);
+    color: rgba(207, 222, 231, 0.7);
+    padding: 56px 60px 28px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: rgba(207, 222, 231, 0.65);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+}
+
+footer ul li a:hover {
+    color: var(--azul-4);
+}
+
