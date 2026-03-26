@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: medium;
+    font-style: italic;
+    background-color: #cfdee7;
+    justify-content: center; 
+    align-items: center;      
+    min-height: 100vh;      
+    margin: 0;
+    
+}
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #5e7ce2;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: #cfdee7;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #0a369d;
+}
+
+.container{
+    background-color: #92b4f4;
+}
