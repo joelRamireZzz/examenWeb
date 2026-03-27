@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #CFD8E7;
+    margin: 40px;
+}
+
+h1{
+    text-align: center;
+    color: #1A3D90;
+}
+
+h2{
+    color: #4A73CA;
+}
+
+.boton-contenedor{
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.boton-registrar{
+    background-color: #1A3D90;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+th{
+    background-color: #4A73CA;
+    color: white;
+    padding: 10px;
+}
+
+td{
+    border: 1px solid #839FDF;
+    padding: 10px;
+    text-align: center;
+}
+
+.editar{
+    background-color: #5F7ED2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+
+.eliminar{
+    background-color: #839FDF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
