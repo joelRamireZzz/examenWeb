@@ -1,87 +1,103 @@
+<?php
+include("Conexion.php");
+
+$consulta_doctores = "SELECT d.id_doctor, d.nombre, d.apellido, d.cedula, d.telefono, e.nombre AS especialidad FROM doctores d INNER JOIN especialidades e ON d.id_especialidad = e.id_especialidad";
+$resultado_doctores = $conexion->query($consulta_doctores);
+
+$consulta_especialidades = "SELECT * FROM especialidades";
+$resultado_especialidades = $conexion->query($consulta_especialidades);
+?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista Directorio</title>
-    <link rel="stylesheet" href="styleDirectorio.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="navbar">
-        <nav>
-            <ul class="navbar-nav">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                 <li><a href="#mision">Misión y Visión</a></li>
-                <li><a href="#valores">Valores</a></li>
-                <li><a href="#aseguradoras">Aseguradoras</a></li>
-                <li><a href="#footer">Contacto</a></li>
-            </ul>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Directorio</title>
+        <link rel="stylesheet" href="styleDirectorio.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <nav>
+                <ul class="navbar-nav">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
 
-        </nav>
-    </div>
-
-    <H1>Directorio</H1>
-    <div class="boton-contenedor">
-        <button class="boton-registrar">Registrar</button>
-    </div>
-    
-    <h2>Doctores</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>ID Doctores</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button class="editar">Editar</button>
-                    <button class="eliminar">Eliminar</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>Especialidades</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>ID Especialidades</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <button class="editar">Editar</button>
-                    <button class="eliminar">Eliminar</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</body>
+        <h1>Directorio</h1>
+        <h2>Doctores</h2>
+        <a href="RegistroDoc.php">
+            <button class="boton-registrar">Registrar Doctor</button>
+        </a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Especialidad</th>
+                    <th>Cédula</th>
+                    <th>Teléfono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while($fila = $resultado_doctores->fetch_assoc()) { ?>
+                <tr>
+                    <td><?php echo $fila['id_doctor']; ?></td>                
+                    <td><?php echo $fila['nombre']; ?></td>                
+                    <td><?php echo $fila['apellido']; ?></td>                
+                    <td><?php echo $fila['especialidad']; ?></td>                
+                    <td><?php echo $fila['cedula']; ?></td>
+                    <td><?php echo $fila['telefono']; ?></td>
+                    <td>
+                        <a href="EditarDoc.php?id=<?php echo $fila['id_doctor']; ?>">
+                            <button class="editar">Editar</button>
+                        </a>
+                        <a href="EliminarDoc.php?id=<?php echo $fila['id_doctor']; ?>" 
+                        onclick="return confirm('¿Seguro que deseas eliminar este doctor?');">
+                        <button class="eliminar">Eliminar</button>
+                    </a>
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+            <h2>Especialidades</h2>
+            <a href="RegistroEsp.php">
+                <button class="boton-registrar">Registrar Especialidad</button>
+            </a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Icono</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while($fila = $resultado_especialidades->fetch_assoc()) { ?>
+                <tr>
+                    <td><?php echo $fila['id_especialidad']; ?></td>
+                    <td><?php echo $fila['nombre']; ?></td>
+                    <td><?php echo $fila['descripcion']; ?></td>
+                    <td>
+                        <img src="imagenes/<?php echo $fila['icono']; ?>" width="60">
+                    </td>
+                    <td>
+                        <a href="EditarEsp.php?id=<?php echo $fila['id_especialidad']; ?>">
+                            <button class="editar">Editar</button>
+                         </a>
+                        <a href="EliminarEsp.php?id=<?php echo $fila['id_especialidad']; ?>"
+                        onclick="return confirm('¿Seguro que deseas eliminar esta especialidad?');">
+                        <button class="eliminar">Eliminar</button>
+                    </a>
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </body>
 </html>
