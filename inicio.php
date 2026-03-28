@@ -1,0 +1,177 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Puentecillas</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <div class="navbar">
+        <nav>
+            <ul class="navbar-nav">
+                <li><a href="Directorio.html">Directorio</a></li>
+                <li><a href="servicios.php">Servicios</a></li>
+                <li><a href="#valores">Valores</a></li>
+                <li><a href="#aseguradoras">Aseguradoras</a></li>
+                <li><a href="#footer">Contacto</a></li>
+                <li><a href="logout.php">Cerrar sesión</a></li>
+            </ul>
+
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="bienvenida">
+            <img class="imgHospital" src="https://hospitalangeles.com/assets/img/fachada-HA-andares.webp"  alt="imagenHospital">
+            <div class="vienvenidaTexto">
+                <h1>Hospital Puentecillas</h1>
+                <h3>Sistema de salud de guanajuato</h3>
+                <p>Dirección: <br>Carretera Guanajuato a Puentecillas Km 10.5, Puentecillas, 36262 Guanajuato, Gto. <br>
+                hospital de salud enfocado en el cuidado de la gente
+            </p>
+            </div>
+            
+        </div>
+
+        <div class="mision">
+            <p></p>
+
+        </div>
+    </div>
+
+    <section id="mision">
+        <div class="section-label">Nuestra identidad</div>
+        <div class="section-title">Misión y Visión</div>
+        <div class="mv-grid">
+            <div class="mv-card">
+
+                <h3>Misión</h3>
+                <p>
+                    La mison de este hospital es entregar salud a lugares
+                    <br> alejados de la capital en donde es dificil acceder a una vida digna
+                </p>
+            </div>
+            <div class="mv-card vision">
+                <h3>Visión</h3>
+                <p>
+                    La vision es tener una infrestructura digna y apta para el cuidado <br>
+                    y prevencion de las personas de la comunidad de puentecillas 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="valores">
+        <div class="section-label">Lo que nos define</div>
+        <div class="section-title">Nuestros Valores</div>
+        <div class="valores-grid">
+            <div class="valor-card">
+                <h4>Compromiso</h4>
+                <p> obligación contraída, palabra dada o acuerdo que implica <br>
+                 responsabilidad y cumplimiento, actuando como un valor para alcanzar metas</p>
+            </div>
+            <div class="valor-card">
+                <h4>Empatía</h4>
+                <p> capacidad de comprender y compartir los sentimientos, emociones <br>
+                 y perspectivas de otra persona</p>
+            </div>
+            <div class="valor-card">
+                <h4>Excelencia</h4>
+                <p>cualidad, mérito o virtud de ser extraordinariamente bueno, superando normas <br>
+                     ordinarias y alcanzando una calidad superior</p>
+            </div>
+            <div class="valor-card">
+                <h4>Seguridad</h4>
+                <p>estado de confianza y ausencia de peligro, riesgo o daño, que protege la integridad <br>
+                     física, material o psicológica de personas y sistemas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="aseguradoras">
+        <div class="section-label">Convenios vigentes</div>
+        <div class="section-title">Aseguradoras Aceptadas</div>
+        <div class="aseguradoras-grid">
+            <div class="aseguradora-card">
+                <div>
+                    <h4>David Seguros</h4>
+                    <p>Cobertura completa hospitalaria y ambulatoria.</p>
+                </div>
+            </div>
+            <div class="aseguradora-card">
+                <div>
+                    <h4>David Salud Plus</h4>
+                    <p>Convenio directo.</p>
+                </div>
+            </div>
+            <div class="aseguradora-card">
+                <div>
+                    <h4>Seguros Brandon</h4>
+                    <p>Plan empresarial.</p>
+                </div>
+            </div>
+            <div class="aseguradora-card">
+                <div>
+                    <h4>David Internacional</h4>
+                    <p>Cobertura internacional.</p>
+                </div>
+            </div>
+            <div class="aseguradora-card">
+                <div>
+                    <h4>Joel Vida</h4>
+                    <p>Plan familiar.</p>
+                </div>
+            </div>
+            <div class="aseguradora-card">
+                <div>
+                    <h4>Emma Protección</h4>
+                    <p>Plan básico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Hospital <span>Puentecillas</span></h3>
+                <p>Dirección: <br>Carretera Guanajuato a Puentecillas Km 10.5, Puentecillas, 36262 Guanajuato, Gto. <br>
+                hospital de salud enfocado en el cuidado de la gente
+            </p>
+            </div>
+            <div>
+                <h4>Página Inicio</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#mision">Misión y Visión</a></li>
+                    <li><a href="#valores">Valores</a></li>
+                    <li><a href="#aseguradoras">Aseguradoras</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Formularios</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Directorio.html">Directorio</a></li>
+                    <li><a href="#">Pediatría</a></li>
+                    <li><a href="#">Laboratorio</a></li>
+                    <li><a href="#">Imagenología</a></li>
+                </ul>
+            </div>
+           
+        </div>
+        <div class="footer-bottom">
+            <span>Pagina creada con fines meramente educacionales para la materia de desarrollo web</span>
+        </div>
+    </footer>
+
+</body>
+</html>
