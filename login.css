@@ -1,0 +1,92 @@
+body {
+    font-family: 'Google Sans', sans-serif;
+    background: linear-gradient(135deg, #0A369D, #4472CA, #5E7CE2);
+    height: 100vh;
+    margin: 0;
+}
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 320px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.login-box h2 {
+    margin-bottom: 5px;
+}
+
+.sub {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #555;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -10px;
+    left: 5px;
+    font-size: 0.7rem;
+    color: white;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #0A369D;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5E7CE2;
+}
+
+
+.error-box {
+    background: #ff4d4d;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
